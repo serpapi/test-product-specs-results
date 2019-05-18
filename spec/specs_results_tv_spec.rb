@@ -30,11 +30,11 @@ describe "SerpApi Specs Results JSON" do
       end
 
       it "key `General` first name `Diagonal Size`" do
-        expect(@first_result["General"][0]["name"]).to eq("Diagonal Size")
+        expect(@first_result["General"].keys.first).to eq("Diagonal Size")
       end
       
       it "key `General` first text `50`" do
-        expect(@first_result["General"][0]["text"]).to eq("50")
+        expect(@first_result["General"].first[1]).to eq("50")
       end
 
     end
